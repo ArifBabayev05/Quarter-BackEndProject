@@ -36,8 +36,9 @@ namespace BackProject
 
 
 
-            //Scop
+            //Scops
             services.AddScoped<ISliderService, SliderRepository>();
+            services.AddScoped<IAboutService, AboutRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

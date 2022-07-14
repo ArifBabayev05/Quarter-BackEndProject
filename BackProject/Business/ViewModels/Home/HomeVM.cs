@@ -7,6 +7,8 @@ namespace Business.ViewModels
     public class HomeVM
     {
         public List<Slider> Sliders { get; set; }
+        public List<About> About { get; set; }
+
     }
 }
 
