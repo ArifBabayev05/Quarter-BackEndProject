@@ -14,6 +14,8 @@ namespace DAL.Data
         public DbSet<Image> Images { get; set; }
         public DbSet<About> About { get; set; }
         public DbSet<TotalNumbers> TotalNumbers { get; set; }
+        public DbSet<OurService> OurServices { get; set; }
+
 
 
     }
