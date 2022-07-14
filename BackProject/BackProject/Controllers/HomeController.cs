@@ -15,9 +15,11 @@ namespace BackProject.Controllers
     public class HomeController : Controller
     {
         private readonly ISliderService _sliderService;
-        public HomeController(ISliderService sliderService)
+        private readonly IAboutService _aboutService;
+        public HomeController(ISliderService sliderService, IAboutService aboutService)
         {
             _sliderService = sliderService;
+            _aboutService = aboutService;
         }
 
 
@@ -26,6 +28,7 @@ namespace BackProject.Controllers
             HomeVM homeVM = new HomeVM();
 
             homeVM.Sliders = await _sliderService.GetAll();
+            homeVM.About = await _aboutService.GetAll();
 
             return View(homeVM);
         }
